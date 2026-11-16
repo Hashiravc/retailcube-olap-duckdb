@@ -345,14 +345,37 @@ ORDER BY grp_periodo DESC, grp_categoria DESC, grp_pais DESC, ventas_netas DESC;
 
 ## 10. Implementación del dashboard en Streamlit
 
-La interfaz gráfica desarrollada en `app/streamlit_app.py` integra siete módulos de interacción:
-1. **Vista General:** Tarjetas KPI con diseño responsivo y gráfica comparativa de ventas brutas vs devoluciones.
-2. **Análisis Temporal:** Selector dinámico de granularidad y exploración interactiva de Roll-up y Drill-down.
-3. **Análisis Geográfico:** Comparación de ventas internacionales, exclusión interactiva de mercados atípicos y mapas regionales.
-4. **Análisis de Productos:** Ranking de los 20 artículos más vendidos y participación por segmento comercial.
-5. **Explorador OLAP:** Laboratorio interactivo donde el usuario elige la operación analítica, personaliza filtros, visualiza la tabla resultante, examina el gráfico asociado, revisa el tiempo de ejecución en milisegundos y copia la consulta SQL empleada.
-6. **Modelo Dimensional:** Diagrama visual del esquema estrella y documentación exhaustiva de claves y medidas.
-7. **Información del Proyecto:** Atribución del dataset, arquitectura y enlaces al código fuente.
+La interfaz gráfica desarrollada en `app/streamlit_app.py` integra siete módulos de interacción ejecutiva y analítica:
+
+### A. Vista General (Tablero Ejecutivo)
+Presenta tarjetas con los KPIs consolidados de ventas netas, ventas brutas, devoluciones, transacciones, clientes y ticket promedio, complementadas con un gráfico interactivo en Plotly que compara mes a mes las ventas regulares frente a las cancelaciones.
+
+![Vista General del Dashboard - RetailCube Analytics](images/01_vista_general.png)
+
+### B. Análisis Temporal y Jerárquico
+Permite seleccionar niveles de granularidad (Año, Trimestre, Mes y Día) y navegar dinámicamente mediante operaciones interactivas de Roll-up y Drill-down.
+
+![Análisis Temporal - Navegación Jerárquica](images/02_analisis_temporal.png)
+
+### C. Análisis Geográfico
+Permite examinar la distribución de ventas por mercado nacional y región geográfica, con la posibilidad de aislar o incluir mercados de alto volumen como el Reino Unido.
+
+![Análisis Geográfico - Distribución Internacional](images/03_analisis_geografico.png)
+
+### D. Análisis de Productos y Categorías
+Identifica los 20 artículos de mayor impacto en facturación y volumen de unidades despachadas, clasificando la participación por categoría comercial.
+
+![Análisis de Productos y Segmentación Comercial](images/04_analisis_productos.png)
+
+### E. Explorador OLAP (Studio Multidimensional)
+Laboratorio interactivo donde el usuario elige la operación analítica deseada (Roll-up, Drill-down, Slice, Dice, Pivot, Cube o Grouping Sets), personaliza los filtros dimensionales, visualiza la tabla resultante, examina el gráfico asociado, revisa el tiempo de ejecución en milisegundos calculado por DuckDB y copia la consulta SQL ejecutada.
+
+![Explorador OLAP - Operaciones Multidimensionales con DuckDB](images/05_explorador_olap.png)
+
+### F. Modelo Dimensional
+Visualiza el esquema estrella mediante diagramas interactivos y especificaciones técnicas completas de claves primarias, sustitutas y medidas analíticas.
+
+![Modelo Dimensional Estrella en la Aplicación](images/06_modelo_dimensional.png)
 
 ---
 

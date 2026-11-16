@@ -16,12 +16,13 @@
 3. [Dataset de Origen & Calidad de Datos](#dataset-de-origen--calidad-de-datos)
 4. [Diseño del Data Warehouse (Modelo Estrella)](#diseño-del-data-warehouse-modelo-estrella)
 5. [Operaciones OLAP Implementadas](#operaciones-olap-implementadas)
-6. [Estructura del Repositorio](#estructura-del-repositorio)
-7. [Instalación y Ejecución Local](#instalación-y-ejecución-local)
-8. [Automatización con GitHub Actions (CI/CD)](#automatización-con-github-actions-cicd)
-9. [Despliegue Público](#despliegue-público)
-10. [Pruebas Automatizadas y Validación](#pruebas-automatizadas-y-validación)
-11. [Enlaces Públicos y Entregables](#enlaces-públicos-y-entregables)
+6. [Vistas del Dashboard y Capturas del Sistema](#6-vistas-del-dashboard-y-capturas-del-sistema)
+7. [Estructura del Repositorio](#7-estructura-del-repositorio)
+8. [Instalación y Ejecución Local](#8-instalación-y-ejecución-local)
+9. [Automatización con GitHub Actions (CI/CD)](#9-automatización-con-github-actions-cicd)
+10. [Despliegue Público](#10-despliegue-público)
+11. [Pruebas Automatizadas y Validación](#11-pruebas-automatizadas-y-validación)
+12. [Enlaces Públicos y Entregables](#12-enlaces-públicos-y-entregables)
 
 ---
 
@@ -177,7 +178,31 @@ Todas las operaciones están respaldadas por consultas SQL nativas en DuckDB (`s
 
 ---
 
-## 6. Estructura del Repositorio
+## 6. Vistas del Dashboard y Capturas del Sistema
+
+A continuación se presentan evidencias reales del funcionamiento de la plataforma:
+
+### Vista General: KPIs Ejecutivos y Tendencias Mensuales
+![Vista General](docs/images/01_vista_general.png)
+
+### Análisis Temporal: Jerarquía Temporal y Roll-up / Drill-down
+![Análisis Temporal](docs/images/02_analisis_temporal.png)
+
+### Análisis Geográfico: Ventas Internacionales y Distribución Regional
+![Análisis Geográfico](docs/images/03_analisis_geografico.png)
+
+### Análisis de Productos: Ranking de Facturación y Categorías
+![Análisis de Productos](docs/images/04_analisis_productos.png)
+
+### Explorador OLAP: Operaciones Multidimensionales con DuckDB SQL
+![Explorador OLAP](docs/images/05_explorador_olap.png)
+
+### Modelo Dimensional Estrella
+![Modelo Dimensional](docs/images/06_modelo_dimensional.png)
+
+---
+
+## 7. Estructura del Repositorio
 
 ```text
 retailcube-olap-duckdb/
@@ -199,8 +224,7 @@ retailcube-olap-duckdb/
 │       └── fact_ventas.parquet
 ├── deliverables/
 │   ├── enlaces.txt                # Enlaces oficiales del proyecto
-│   ├── README_ENTREGA.md          # Documento resumen de cumplimiento de requisitos
-│   └── guion_video.md             # Guion detallado minuto a minuto para el video demo
+│   └── README_ENTREGA.md          # Documento resumen de cumplimiento de requisitos
 ├── docs/
 │   ├── architecture.md            # Documento formal de arquitectura y decisiones
 │   └── articulo-devto.md          # Artículo técnico completo preparado para DEV.to
@@ -234,7 +258,7 @@ retailcube-olap-duckdb/
 
 ---
 
-## 7. Instalación y Ejecución Local
+## 8. Instalación y Ejecución Local
 
 ### Prerrequisitos
 - Python 3.10 o superior (recomendado Python 3.12 o 3.13)
@@ -269,7 +293,7 @@ streamlit run app/streamlit_app.py
 
 ---
 
-## 8. Automatización con GitHub Actions (CI/CD)
+## 9. Automatización con GitHub Actions (CI/CD)
 
 El proyecto cuenta con dos workflows en `.github/workflows/`:
 
@@ -282,7 +306,7 @@ El proyecto cuenta con dos workflows en `.github/workflows/`:
 
 ---
 
-## 9. Despliegue Público
+## 10. Despliegue Público
 
 La plataforma se encuentra desplegada públicamente en **Streamlit Community Cloud**, vinculada directamente a la rama `main` de GitHub. Cualquier cambio probado en el repositorio desencadena la reconstrucción automática del contenedor sin tiempo de inactividad.
 
@@ -290,7 +314,7 @@ La plataforma se encuentra desplegada públicamente en **Streamlit Community Clo
 
 ---
 
-## 10. Pruebas Automatizadas y Validación
+## 11. Pruebas Automatizadas y Validación
 
 Para ejecutar las pruebas:
 ```bash
@@ -322,12 +346,11 @@ tests/test_star_schema.py::test_revenue_conservation_and_cancel_consistency PASS
 
 ---
 
-## 11. Enlaces Públicos y Entregables
+## 12. Enlaces Públicos y Entregables
 
 - **Repositorio GitHub:** [https://github.com/Hashiravc/retailcube-olap-duckdb](https://github.com/Hashiravc/retailcube-olap-duckdb)
 - **Aplicación Desplegada:** [https://retailcube-olap-duckdb.streamlit.app](https://retailcube-olap-duckdb.streamlit.app)
 - **Artículo Técnico DEV.to:** [docs/articulo-devto.md](docs/articulo-devto.md)
-- **Guion del Video Demostrativo:** [deliverables/guion_video.md](deliverables/guion_video.md)
 - **Archivo de Enlaces:** [deliverables/enlaces.txt](deliverables/enlaces.txt)
 - **Archivo ZIP de Entrega:** `entrega-retailcube-olap.zip`
 

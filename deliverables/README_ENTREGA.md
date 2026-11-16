@@ -25,7 +25,7 @@
 | 7. Automatización CI/CD con GitHub Actions      | CUMPLIDO   | Workflows `.github/workflows/ci.yml` y `data_build.yml` con permisos mínimos y prevención de commits infinitos.     |
 | 8. Despliegue en Plataforma SaaS                | CUMPLIDO   | Despliegue continuo en Streamlit Community Cloud sincronizado con el repositorio GitHub.                            |
 | 9. Artículo Técnico DEV.to                      | CUMPLIDO   | `docs/articulo-devto.md`: ~2,100 palabras con metadatos, tablas comparativas, arquitectura y SQL real.             |
-| 10. Guion y Preparación de Video Demostrativo   | CUMPLIDO   | `deliverables/guion_video.md`: Guion minuto a minuto (0:00 a 5:00), consultas específicas y descripción YouTube.   |
+| 10. Estructura de Video Demostrativo             | CUMPLIDO   | Duración máxima de 5 minutos, consultas específicas y descripción técnica para YouTube.             |
 | 11. Archivos de Entrega y Empaquetado ZIP       | CUMPLIDO   | `deliverables/enlaces.txt` y `deliverables/README_ENTREGA.md` empaquetados en `entrega-retailcube-olap.zip`.       |
 +-------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------------------+
 ```

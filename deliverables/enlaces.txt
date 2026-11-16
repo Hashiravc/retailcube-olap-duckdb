@@ -13,7 +13,6 @@ https://dev.to/hashiravc/construyendo-una-solucion-olap-con-duckdb-python-y-stre
 
 VIDEO DEMOSTRATIVO:
 https://youtu.be/retailcube-olap-demo
-(Guion y minutaje completo preparado: deliverables/guion_video.md listo para grabación)
 
 AUTOMATIZACIÓN GITHUB ACTIONS:
 https://github.com/Hashiravc/retailcube-olap-duckdb/actions
