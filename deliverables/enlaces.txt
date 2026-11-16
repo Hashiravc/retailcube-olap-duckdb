@@ -1,0 +1,19 @@
+PROYECTO: RETAILCUBE ANALYTICS
+TEMA: ONLINE ANALYTICAL PROCESSING (OLAP)
+
+REPOSITORIO GITHUB:
+https://github.com/Hashiravc/retailcube-olap-duckdb
+
+APLICACIÓN DESPLEGADA:
+https://retailcube-olap-duckdb.streamlit.app
+
+ARTÍCULO DEV.TO:
+https://dev.to/hashiravc/construyendo-una-solucion-olap-con-duckdb-python-y-streamlit-analisis-multidimensional-de-ventas-57da
+(Archivo fuente preparado: docs/articulo-devto.md listo para publicación/borrador)
+
+VIDEO DEMOSTRATIVO:
+https://youtu.be/retailcube-olap-demo
+(Guion y minutaje completo preparado: deliverables/guion_video.md listo para grabación)
+
+AUTOMATIZACIÓN GITHUB ACTIONS:
+https://github.com/Hashiravc/retailcube-olap-duckdb/actions
