@@ -350,32 +350,32 @@ La interfaz gráfica desarrollada en `app/streamlit_app.py` integra siete módul
 ### A. Vista General (Tablero Ejecutivo)
 Presenta tarjetas con los KPIs consolidados de ventas netas, ventas brutas, devoluciones, transacciones, clientes y ticket promedio, complementadas con un gráfico interactivo en Plotly que compara mes a mes las ventas regulares frente a las cancelaciones.
 
-![Vista General del Dashboard - RetailCube Analytics](images/01_vista_general.png)
+![Vista General del Dashboard - RetailCube Analytics](https://raw.githubusercontent.com/Hashiravc/retailcube-olap-duckdb/main/docs/images/01_vista_general.png)
 
 ### B. Análisis Temporal y Jerárquico
 Permite seleccionar niveles de granularidad (Año, Trimestre, Mes y Día) y navegar dinámicamente mediante operaciones interactivas de Roll-up y Drill-down.
 
-![Análisis Temporal - Navegación Jerárquica](images/02_analisis_temporal.png)
+![Análisis Temporal - Navegación Jerárquica](https://raw.githubusercontent.com/Hashiravc/retailcube-olap-duckdb/main/docs/images/02_analisis_temporal.png)
 
 ### C. Análisis Geográfico
 Permite examinar la distribución de ventas por mercado nacional y región geográfica, con la posibilidad de aislar o incluir mercados de alto volumen como el Reino Unido.
 
-![Análisis Geográfico - Distribución Internacional](images/03_analisis_geografico.png)
+![Análisis Geográfico - Distribución Internacional](https://raw.githubusercontent.com/Hashiravc/retailcube-olap-duckdb/main/docs/images/03_analisis_geografico.png)
 
 ### D. Análisis de Productos y Categorías
 Identifica los 20 artículos de mayor impacto en facturación y volumen de unidades despachadas, clasificando la participación por categoría comercial.
 
-![Análisis de Productos y Segmentación Comercial](images/04_analisis_productos.png)
+![Análisis de Productos y Segmentación Comercial](https://raw.githubusercontent.com/Hashiravc/retailcube-olap-duckdb/main/docs/images/04_analisis_productos.png)
 
 ### E. Explorador OLAP (Studio Multidimensional)
 Laboratorio interactivo donde el usuario elige la operación analítica deseada (Roll-up, Drill-down, Slice, Dice, Pivot, Cube o Grouping Sets), personaliza los filtros dimensionales, visualiza la tabla resultante, examina el gráfico asociado, revisa el tiempo de ejecución en milisegundos calculado por DuckDB y copia la consulta SQL ejecutada.
 
-![Explorador OLAP - Operaciones Multidimensionales con DuckDB](images/05_explorador_olap.png)
+![Explorador OLAP - Operaciones Multidimensionales con DuckDB](https://raw.githubusercontent.com/Hashiravc/retailcube-olap-duckdb/main/docs/images/05_explorador_olap.png)
 
 ### F. Modelo Dimensional
 Visualiza el esquema estrella mediante diagramas interactivos y especificaciones técnicas completas de claves primarias, sustitutas y medidas analíticas.
 
-![Modelo Dimensional Estrella en la Aplicación](images/06_modelo_dimensional.png)
+![Modelo Dimensional Estrella en la Aplicación](https://raw.githubusercontent.com/Hashiravc/retailcube-olap-duckdb/main/docs/images/06_modelo_dimensional.png)
 
 ---
 
