@@ -1,0 +1,40 @@
+name: RetailCube CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Build, Lint and Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Python Syntax and Linting Check
+        run: |
+          python -m py_compile src/ingestion/download_and_ingest.py
+          python -m py_compile src/transformations/build_star_schema.py
+          python -m py_compile src/olap/olap_engine.py
+          python -m py_compile app/streamlit_app.py
+
+      - name: Run Unit, Dimensional & OLAP Tests
+        run: |
+          pytest -v --tb=short
